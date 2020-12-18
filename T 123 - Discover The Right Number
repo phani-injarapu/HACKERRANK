@@ -1,0 +1,12 @@
+a=input()
+sum=0
+if(len(a)==1):
+    for i in range(len(a)):
+        x=ord(a[i])-64
+        sum+=x
+elif(len(a)>=2):
+    sum = 0; 
+    for i in range(len(a)): 
+        sum *= 26; 
+        sum += ord(a[i])-64;  
+print(sum)
