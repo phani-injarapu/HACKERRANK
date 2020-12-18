@@ -1,0 +1,4 @@
+import math
+a = float(input())
+area = math.pi*a**2
+print("%.6f" %area )
