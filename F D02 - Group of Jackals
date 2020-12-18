@@ -1,0 +1,15 @@
+import sys
+def LeaderSum(array):
+    j=0
+    for i in range(len(array)-1):
+        c=max(array[i+1:n])
+        if(array[i]>c):
+            j=j+array[i]
+            
+    j=j+array[-1]
+    return j
+
+n = int(input().strip())
+array = list(map(int, input().strip().split(' ')))
+result = LeaderSum(array)
+print(result)
