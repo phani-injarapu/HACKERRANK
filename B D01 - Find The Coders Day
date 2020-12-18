@@ -1,0 +1,5 @@
+/* TRY IN PYPY3 */
+
+yyyy = int(input())
+if yyyy == 1918 : print(f"26.09.1918"); exit()
+print(f"12.09.{yyyy}") if (yyyy % 4 == 0 and yyyy % 100 != 0) or (yyyy % 400 == 0) or (yyyy % 4 == 0 and yyyy <= 1917) else print(f"13.09.{yyyy}")
