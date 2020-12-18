@@ -1,0 +1,23 @@
+n = int(input())
+large =0
+num = []
+for i in range(n):
+    num.append(int(input()))
+    if(large<num[i]):
+        large = num[i]
+a=[]
+for i in range(large+1):
+    a.append(0)
+a[0]=1
+a[1]=1
+for i in range(2,large+1):
+    if(a[i]==0):
+        j=i+i
+        while(j<=large):
+            a[j]=1
+            j=j+i
+for i in range(n):
+    if(a[num[i]]==0):
+        print("yes")
+    else:
+        print("no")
