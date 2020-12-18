@@ -1,0 +1,21 @@
+import math
+def checkPrime(val):
+    if val<2:
+        return False
+    i=2
+    limit = math.sqrt(val)
+    
+    while i<=limit:
+        if val%i==0:
+            return False
+        i +=1
+    return True
+
+n = int(input())
+for x in range(n):
+    val = int(input())
+    res = checkPrime(val)
+    if res:
+        print("yes")
+    else:
+        print("no")
