@@ -1,0 +1,10 @@
+def wave(array):
+    array.sort()
+    for i in range(0,(len(array)-1),2): 
+        array[i], array[i+1] = array[i+1], array[i] 
+
+    return array
+
+n = int(input())
+arr = list(map(int, input().strip().split(' ')))
+print (*wave(arr))
