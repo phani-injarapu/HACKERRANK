@@ -1,0 +1,11 @@
+def iSeries(x):
+    if x==0:
+        return a
+    elif x==1:
+        return b
+    elif x==2:
+        return c
+    return iSeries(x-1)^(iSeries(x-2)+iSeries(x-3))
+a,b,c,d=list(map(int,input().split()))
+FN=iSeries(d)
+print(FN)
