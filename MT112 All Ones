@@ -1,0 +1,12 @@
+n=int(input())
+for i in range(n):
+    array,k=input().split()
+    k=int(k)
+    array=list(array)
+    count=0
+    for j in range(len(array)-k+1):
+        if array[j]=='0':
+            array[j:j+k]=['1' if x=='0' else '0' for x in array[j:j+k]]
+            count+=1
+    y=-1 if(array.count('0')!=0) else count
+    print(y)
