@@ -1,0 +1,14 @@
+a = int(input())
+b = int(input())
+c = input().split()
+x=a
+r=0
+for i in range(b):
+    if a <= int(c[i]):
+        r=r+1
+        a=x
+        if x <= int(c[i]):
+            r = -2
+            break
+    a = a-int(c[i])
+print(r+1)
