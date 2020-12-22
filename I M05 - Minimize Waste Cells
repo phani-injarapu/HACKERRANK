@@ -1,0 +1,25 @@
+def function(st, k):
+    a = len(st)+1
+    for i in range(a,(k*k)+1):
+        st = st[:i] + "?" + st[i:]
+    for i in range(len(st)): 
+        if i%k == 0: 
+            sub = st[i:i+k] 
+            lst = []
+            for j in sub:
+                lst.append(j)
+            print(''.join(lst))
+            
+s = input()
+length = len(s)
+if(length == 1):
+    print(s)
+else:
+    if(length == 2):
+        s = s[:3]+"?"+s[3:]
+        length = len(s)
+    for i in range(2,length):
+        if ( (i*i) >= length):
+            jen = i
+            break
+    function(s, jen)
