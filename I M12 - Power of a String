@@ -1,0 +1,22 @@
+def counts(str,n):
+    if(len(str) == n):
+        d = {}
+        b=0
+        for i in str:
+            if i in d:
+                d[i] += 1
+            else:
+                d[i] = 1
+        for i in str:
+            if d[i] != 0:
+                b = b+ (d[i]*d[i])
+                d[i] = 0
+        print(b)
+
+if __name__ == "__main__" :
+    
+    num = int(input())
+    for i in range(num):
+        n = int(input())
+        str = input()
+        counts(str,n)
