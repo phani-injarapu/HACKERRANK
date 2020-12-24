@@ -1,0 +1,7 @@
+m = int(input())
+L1 = [int(i) for i in input().split()[0:m]]
+n = int(input())
+L2 = [int(i) for i in input().split()[0:n]]
+L1.extend(L2)
+L1.sort()
+print(*L1)
