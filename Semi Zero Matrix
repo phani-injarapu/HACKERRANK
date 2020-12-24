@@ -1,0 +1,35 @@
+def modifyMatrix(mat,R,C): 
+    row = [0] * R  
+    col = [0] * C  
+    for i in range(0, R): 
+        row[i] = 1
+          
+
+    for i in range(0, C) : 
+        col[i] = 1
+  
+    for i in range(0, R) : 
+          
+        for j in range(0, C) : 
+            if (mat[i][j] == 0) : 
+                row[i] = 0
+                col[j] = 0
+              
+    for i in range(0, R) : 
+        for j in range(0, C): 
+            if ( row[i] == 0 or col[j] == 0) : 
+                mat[i][j] = 0
+                  
+def printMatrix(mat,R,C) : 
+    for i in range(R): 
+        for j in range(C) : 
+            print(mat[i][j], end = " ") 
+        print() 
+
+R,C = map(int,input().split())
+mat=[]
+for i in range(R):
+    mat.append(list(map(int,input().strip().split(' ')[0:C])))
+    
+modifyMatrix(mat,R,C) 
+printMatrix(mat,R,C) 
