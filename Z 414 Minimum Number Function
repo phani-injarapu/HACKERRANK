@@ -1,0 +1,5 @@
+n = int(input())
+ans = "int"
+for i in range(n-1):
+    ans = "min(int, " + ans + ")"
+print(ans)
