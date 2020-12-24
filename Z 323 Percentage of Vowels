@@ -1,0 +1,12 @@
+def Check_Vow(string, vowels): 
+    final = [each for each in string if each in vowels] 
+    vow = len(final)
+    total = [each for each in string]
+    tot = len(total)
+    
+    ans = (vow/tot)*100.0000
+    print('%.4f'%ans)
+
+string = input()
+vowels = "AaEeIiOoUu"
+Check_Vow(string, vowels); 
