@@ -1,0 +1,2 @@
+import itertools
+print("\n".join(list(map("".join,itertools.permutations(sorted(input()))))))
