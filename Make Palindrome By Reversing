@@ -1,0 +1,13 @@
+iterations = 0
+n = int(input())
+while iterations < 5:
+    k=str(n)
+    n = int(k)+int(k[::-1])
+    k=str(n)
+    if k==k[::-1] : 
+        print(n)
+        print ("YES")
+        break
+    iterations+=1
+else:
+    print ("NO")
