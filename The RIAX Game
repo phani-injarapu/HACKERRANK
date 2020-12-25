@@ -1,0 +1,16 @@
+n=int(input()) 
+l=[] 
+s=0
+l=list(map(int,input().split()))
+for i in l:
+    if(i==1):
+        s=s+1
+    elif(i==2):
+        s=s+2
+    elif(i%2==0 and i%4==0 and i%3!=0):
+        s=s+2
+    elif(i%3==0 or i%5==0):
+        s=s+3
+    else:
+        s=s+4
+print(s)
