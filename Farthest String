@@ -1,0 +1,19 @@
+n=int(input())
+l=[]
+m=0
+for i in range(n):
+    x=input()
+    l.append(x)
+for i in range(n):
+    c=0
+    j=0
+    k=len(l[i])-1
+    while(j<k):
+        if(l[i][j]!=l[i][k]):
+            c+=1
+        j+=1
+        k-=1
+    if(m<c):
+        m=c
+        index=i
+print(l[index])
