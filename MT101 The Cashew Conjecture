@@ -1,0 +1,34 @@
+from math import sqrt
+N = 100005; 
+isprime = [True] * N
+can = [False] * N
+def check() : 
+    for p in range(2, int(sqrt(N)) + 1) : 
+        if (isprime[p] == True) : 
+            for i in range(p * p, N , p) :  
+                isprime[i] = False
+    primes = [] 
+    for i in range(2, N) : 
+        if (isprime[i]):  
+            primes.append(i)
+    return primes
+ 
+def Prime_Numbers(n) :  
+    primes = check();  
+    for i in range(len(primes) - 1) : 
+        if (primes[i] + primes[i + 1] + 1 < N) : 
+            can[primes[i] + primes[i + 1] + 1] = True
+    ans = 0 
+    for i in range(2, n + 1) :  
+        if (can[i] and isprime[i]) :  
+            ans += 1         
+    return ans
+
+if __name__ == "__main__" : 
+    n,k = input().split()
+    n = int(n)
+    k = int(k)
+    if(Prime_Numbers(n) >= k):
+        print("YES")
+    else:
+        print("NO")
